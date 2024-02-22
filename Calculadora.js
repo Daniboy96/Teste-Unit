@@ -1,6 +1,17 @@
-
 function soma(a, b) {
     return a + b
 }
 
-module.exports = {soma}
+function subtracao(a, b) {
+    return a - b;
+}
+
+function multiplicacao(a, b) {
+    return a * b;
+}
+
+function adicao(a, b) {
+    return a / b;
+}
+
+module.exports = {soma, subtracao, multiplicacao, adicao}
