@@ -10,6 +10,6 @@ module.exports = {
           functions: 75,
           lines: 75,
         }
-      }
+      },
 
   }

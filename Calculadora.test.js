@@ -13,6 +13,6 @@ test('validar multiplicação', () => {
     expect(multiplicacao(3, 4)).toBe(12)
 })
 
-test('validar adição', () => {
+test('validar divisão', () => {
     expect(adicao(10, 2)).toBe(5)
 })
