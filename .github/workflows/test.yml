@@ -30,7 +30,7 @@ jobs:
 
       - name: Calculate Code Coverage
         run: |
-          COVERAGE=$(node calculate_coverage.js)
+          COVERAGE=$(node calcularCoverage.js)
           echo "Code Coverage: $COVERAGE"
           if [ "$COVERAGE" -lt "75" ]; then
             echo "Code coverage is below minimum value of 75%. Can't merge."
