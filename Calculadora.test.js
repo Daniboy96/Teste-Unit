@@ -1,4 +1,4 @@
-const {soma, subtracao, multiplicacao, adicao} = require('./Calculadora.js')
+const {soma, subtracao, multiplicacao, adicao, divisao} = require('./Calculadora.js')
 
 test('validar soma', () => {
     expect(soma(5, 5)).toBe(10)
@@ -14,5 +14,5 @@ test('validar multiplicação', () => {
 })
 
 test('validar divisão', () => {
-    expect(adicao(10, 2)).toBe(5)
+    expect(divisao(10, 2)).toBe(5)
 })
