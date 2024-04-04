@@ -39,6 +39,6 @@ jobs:
           fi
 
       - name: SonarCloud Scan
-        uses: sonarsource/sonarcloud-github-action@master
+        uses: sonarsource/sonarcloud-github-action@stg
         env:
           SONAR_TOKEN: a1e34b469f9eb7220d35238bc9ef9351896e2c5e
