@@ -5,7 +5,7 @@ on:
     branches:
       - master
       - Stg
-      
+  
   pull_request:
     types: [opened, synchronize, reopened]
 
@@ -17,7 +17,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
@@ -34,13 +34,11 @@ jobs:
           COVERAGE=$(node calcularCoverage.js)
           echo "Code Coverage: $COVERAGE"
           if [ "$COVERAGE" -lt "75" ]; then
-            echo "Code coverage is below minimum value of 75%. Can't merge."
+            echo "Code coverage is below the minimum value of 75%. Can't merge."
             exit 1
           fi
-      
-      - name: Check test status
-        run: |
-          if [ ${{ job.status }} -ne 0 ]; then
-            echo "Tests failed. Can't merge."
-            exit 1
-          fi
+
+      - name: SonarCloud Scan
+        uses: sonarsource/sonarcloud-github-action@master
+        env:
+          SONAR_TOKEN: a1e34b469f9eb7220d35238bc9ef9351896e2c5e
